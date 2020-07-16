@@ -1,10 +1,14 @@
 {
-    "controllerPathGlobs": ["src/**/*.controller.ts"],
-    "swagger": {
+    "controllerPathGlobs": [
+        "src/**/*.controller.ts"
+    ],
+    "entryFile": "./src/index.ts",
+    "spec": {
         "basePath": "/api",
-        "entryFile": "./src/index.ts",
         "outputDirectory": "./src",
-        "noImplicitAdditionalProperties": "throw-on-extras",
+        "entryFile": "./src/index.ts",
+        "noImplicitAdditionalProperties": "silently-remove-extras",
+        "specVersion": null,
         "securityDefinitions": {
             "jwt": {
                 "type": "apiKey",

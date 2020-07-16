@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "tsoa routes && tsc && tsoa swagger",
-        "build:tsoa": "tsoa routes && tsoa swagger",
+        "build:tsoa": "tsoa spec-and-routes",
         "docker:build": "npm run build && docker build -t tsoa-starter .",
         "start": "node ./dist/index.js",
         "start:dev": "ts-node ./src/index.ts",
