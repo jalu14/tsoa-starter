@@ -1,0 +1,19 @@
+name: Docker build
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Login
+      run: docker login ghcr.io -u ${{ secrets.USERNAME }} -p ${{ secrets.USERNAME }}
+    - name: Build
+      run: docker build . -t estado-trenes-api:latest
+    - name: Push
+      run: docker push estado-trenes-api:latest
+
+    

@@ -13,14 +13,10 @@ RUN npm install --production && npm cache clean --force
 # Bundle app source
 COPY . /app
 
-RUN npm install -g json
-RUN npm run build:tsoa
 RUN npm run build
-RUN json -I -f ./dist/swagger.json -e this.info.version="'${tag}'"
-RUN npm uninstall -g json
 
 # Expose the port
-EXPOSE 3000
+EXPOSE 8080
 
 # Start command
 CMD npm start

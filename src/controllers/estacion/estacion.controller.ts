@@ -5,7 +5,7 @@ import { Controller, Get, Route } from "@tsoa/runtime";
 export class EstacionesController extends Controller {
 
     @Get()
-    public async getEstacion() {
-        return 'Holo';
+    public async get() {
+        return 'Hola estaciones';
     }
 }
